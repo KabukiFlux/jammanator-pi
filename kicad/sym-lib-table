@@ -1,0 +1,8 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "jamma")(type "KiCad")(uri "${KIPRJMOD}/jamma.kicad_sym")(options "")(descr ""))
+  (lib (name "PAM8006A")(type "KiCad")(uri "${KIPRJMOD}/PAM8006A.kicad_sym")(options "")(descr ""))
+  (lib (name "NOCTUA")(type "KiCad")(uri "${KIPRJMOD}/NOCTUA.kicad_sym")(options "")(descr ""))
+  (lib (name "jamma_raspi")(type "KiCad")(uri "${KIPRJMOD}/jamma_raspi.kicad_sym")(options "")(descr ""))
+  (lib (name "voltmeter")(type "KiCad")(uri "${KIPRJMOD}/voltmeter.kicad_sym")(options "")(descr ""))
+)

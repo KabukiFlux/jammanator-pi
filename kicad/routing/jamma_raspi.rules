@@ -1,0 +1,101 @@
+
+(rules PCB jamma_raspi
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 62709)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.3)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.8)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clearance 200.2)
+    (clearance 125.0 (type smd_to_turn_gap))
+    (clearance 50.0 (type smd))
+    (clearance 200.2 (type "kicad_default"))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    "Net-(C1-Pad1)" /GND /L "Net-(C2-Pad2)" /R "/JAMMA RASPI IOs/GND" "/JAMMA RASPI IOs/INPUT01" "Net-(C10-Pad1)"
+    "Net-(C11-Pad1)" /+5V /+3.3V "/JAMMA RASPI IOs/INPUT02" "/JAMMA RASPI IOs/INPUT03" "/JAMMA RASPI IOs/INPUT04" "/JAMMA RASPI IOs/INPUT05" "/JAMMA RASPI IOs/INPUT06"
+    "/JAMMA RASPI IOs/INPUT07" "/JAMMA RASPI IOs/INPUT08" "/JAMMA RASPI IOs/INPUT11" "/JAMMA RASPI IOs/INPUT12" "/JAMMA RASPI IOs/INPUT13" "/JAMMA RASPI IOs/INPUT14" "/JAMMA RASPI IOs/INPUT15" "/JAMMA RASPI IOs/INPUT16"
+    "/JAMMA RASPI IOs/INPUT17" "/JAMMA RASPI IOs/INPUT18" "/JAMMA RASPI IOs/INPUT21" "/JAMMA RASPI IOs/INPUT22" "/JAMMA RASPI IOs/INPUT23" "/JAMMA RASPI IOs/INPUT24" "/JAMMA RASPI IOs/INPUT25" "/JAMMA RASPI IOs/INPUT26"
+    "/JAMMA RASPI IOs/INPUT27" "/JAMMA RASPI IOs/INPUT28" "/JAMMA RASPI IOs/INPUT31" "/JAMMA RASPI IOs/INPUT32" "/JAMMA RASPI IOs/INPUT33" "/JAMMA RASPI IOs/INPUT34" "/JAMMA RASPI IOs/INPUT35" "/JAMMA RASPI IOs/INPUT36"
+    "/JAMMA RASPI IOs/INPUT37" "/JAMMA RASPI IOs/INPUT38" "/JAMMA RASPI IOs/+3.3V" "Net-(J1-Pin_1)" "Net-(J1-Pin_2)" "/SPK_R-" "/SPK_R+" "unconnected-(J2-Pin_1-Pad1)"
+    /VSYNC /HSYNC /B2 /G4 /G5 /G7 "/PWM_RIGHT" "unconnected-(J2-Pin_13-Pad13)"
+    /R4 /R5 "unconnected-(J2-Pin_17-Pad17)" /R6 "unconnected-(J2-Pin_19-Pad19)" /B7 /R7 "unconnected-(J2-Pin_23-Pad23)"
+    /B6 /B5 "/I2C_SDA" "/I2C_SCL" /B3 /B4 /G2 /G3
+    "/PWM_LEFT" /G6 "unconnected-(J2-Pin_37-Pad37)" /R2 /R3 "unconnected-(J3--5V-Pad5)" "Net-(J2-Pin_2)" "unconnected-(J3-Meter_2-Pad8)"
+    "unconnected-(J3-Lockout_2-Pad9)" "/SPK_L+" "unconnected-(J3-Unused-Pad11)" "/RGB_RED" "/RGB_BLUE" "/TEST_J" "/P1_COIN_J" "/P1_START_J"
+    "/P1_UP_J" "/P1_DOWN_J" "/P1_LEFT_J" "/P1_RIGHT_J" "/P1_B1_J" "/P1_B2_J" "/P1_B3_J" "/P1_B4_J"
+    "/P1_B5_J" "/P1_B6_J" "unconnected-(J3--5V-PadE)" "unconnected-(J3-Meter_1-PadJ)" "unconnected-(J3-Lockout_1-PadK)" "/SPK_L-" "unconnected-(J3-Unused-PadM)" "/RGB_GREEN"
+    /CSYNC "/SERVICE_J" "unconnected-(J3-Tilt-PadS)" "/P2_COIN_J" "/P2_START_J" "/P2_UP_J" "/P2_DOWN_J" "/P2_LEFT_J"
+    "/P2_RIGHT_J" "/P2_B1_J" "/P2_B2_J" "/P2_B3_J" "/P2_B4_J" "/P2_B5_J" "/P2_B6_J" "/P1_K4_K"
+    "/P1_K5_K" "/P1_K6_K" "unconnected-(J4-Pin_6-Pad6)" "/P2_K4_K" "/P2_K5_K" "/P2_K6_K" "unconnected-(J4-Pin_10-Pad10)" "unconnected-(J5-Pin_3-Pad3)"
+    "Net-(JP3-B)" "Net-(JP5-B)" /+12V "Net-(U3-R_AUDIO_IN)" "Net-(U3-L_AUDIO_IN)" "/P1_B3" "/P1_B4" "/P1_B5"
+    "/P1_B6" /TEST "/P1_K4" "/P1_K5" "/P1_K6" "unconnected-(U1-NC-Pad11)" "unconnected-(U1-NC-Pad14)" "unconnected-(U1-INTB-Pad19)"
+    "unconnected-(U1-INTA-Pad20)" "/P1_UP" "/P1_DOWN" "/P1_LEFT" "/P1_RIGHT" "/P1_START" "/P1_COIN" "/P1_B1"
+    "/P1_B2" "/P2_B3" "/P2_B4" "/P2_B5" "/P2_B6" /SERVICE "/P2_K4" "/P2_K5"
+    "/P2_K6" "unconnected-(U2-NC-Pad11)" "unconnected-(U2-NC-Pad14)" "unconnected-(U2-INTB-Pad19)" "unconnected-(U2-INTA-Pad20)" "/P2_UP" "/P2_DOWN" "/P2_LEFT"
+    "/P2_RIGHT" "/P2_START" "/P2_COIN" "/P2_B1" "/P2_B2" "Net-(U4-Pad3)" "Net-(U4-Pad10)" /BLANKING
+    "unconnected-(J8-Pin_2-Pad2)" "unconnected-(J8-Pin_3-Pad3)" "Net-(RS3-Pad2)" "Net-(DPWR1-K)" "Net-(RB11-Pad1)" "Net-(RB10-Pad1)" "Net-(RB10-Pad2)" "Net-(RB5-Pad2)"
+    "Net-(RB6-Pad2)" "Net-(RG11-Pad1)" "Net-(RG10-Pad1)" "Net-(RG10-Pad2)" "Net-(RG5-Pad2)" "Net-(RG6-Pad2)" "Net-(RR11-Pad1)" "Net-(RR10-Pad1)"
+    "Net-(RR10-Pad2)" "Net-(RR5-Pad2)" "Net-(RR6-Pad2)"
+    (clearance_class "kicad_default")
+    (via_rule "kicad_default")
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)

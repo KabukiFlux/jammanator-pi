@@ -1,0 +1,10 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "jamma")(type "KiCad")(uri "${KIPRJMOD}/jamma.pretty")(options "")(descr ""))
+  (lib (name "kabuki")(type "KiCad")(uri "${KIPRJMOD}/kabuki.pretty")(options "")(descr ""))
+  (lib (name "NOCTUA")(type "KiCad")(uri "${KIPRJMOD}/NOCTUA.pretty")(options "")(descr ""))
+  (lib (name "GPIO_raspi")(type "KiCad")(uri "${KIPRJMOD}/GPIO_raspi.pretty")(options "")(descr ""))
+  (lib (name "jamma_raspi")(type "KiCad")(uri "${KIPRJMOD}/jamma_raspi.pretty")(options "")(descr ""))
+  (lib (name "voltmeter")(type "KiCad")(uri "${KIPRJMOD}/voltmeter.pretty")(options "")(descr ""))
+  (lib (name "JST_NH")(type "KiCad")(uri "${KIPRJMOD}/JST_NH.pretty")(options "")(descr ""))
+)
